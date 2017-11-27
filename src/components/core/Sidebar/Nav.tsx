@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { nav, navItem, childrenActive, navItemChildren, active } from './Nav.scss';
-import { HOME, INSIGHTS, USERS } from '../../../icons';
+import { nav, navItem, childrenActive, navItemChildren } from './Nav.scss';
 import { NavLink } from 'react-router-dom';
 
 interface INavState {
@@ -9,20 +8,20 @@ interface INavState {
 
 interface INavigation {
   name: string;
-  link?: string;
-  icon: string;
-  children?: { name: string, link: string }[];
+  children: { name: string, link: string }[];
 }
 
 const navigation: INavigation[] = [
   {
     name: 'Dashboard',
-    link: '/',
-    icon: HOME,
+    children: [
+      { name: 'Administrar', link: '/holders/manage' },
+      { name: 'Grupos', link: '/holders/groups' },
+      { name: 'Perfis', link: '/holders/profiles' },
+    ],
   },
   {
     name: 'Alunos',
-    icon: USERS,
     children: [
       { name: 'Administrar', link: '/holders/manage' },
       { name: 'Grupos', link: '/holders/groups' },
@@ -31,7 +30,6 @@ const navigation: INavigation[] = [
   },
   {
     name: 'Smart Pass',
-    icon: USERS,
     children: [
       { name: 'Maquinas', link: '/iot/machines' },
       { name: 'Cartões', link: '/iot/cards' },
@@ -40,7 +38,6 @@ const navigation: INavigation[] = [
   },
   {
     name: 'Insights',
-    icon: INSIGHTS,
     children: [
       { name: 'Comportamento', link: '/insights/behavior' },
       { name: 'Campus', link: '/insights/campus' },
@@ -49,7 +46,6 @@ const navigation: INavigation[] = [
   },
   {
     name: 'Admin',
-    icon: INSIGHTS,
     children: [
       { name: 'Usuários', link: '/admin/users' },
       { name: 'Perfis', link: '/admin/roles' },
@@ -81,18 +77,11 @@ export default class Nav extends React.Component<any, INavState> {
   }
 
   private renderNavigationLink(nav: INavigation) {
-    if (!nav.link) return (
+    return (
       <div className={navItem}>
         <span/><span/>
-        <img srcSet={nav.icon} alt="icon" />
         <h2>{nav.name}</h2>
       </div>
-    );
-    return (
-      <NavLink className={navItem} activeClassName={active} exact to={nav.link} style={{ cursor: 'pointer' }}>
-        <img srcSet={nav.icon} alt="icon" />
-        <h2>{nav.name}</h2>
-      </NavLink>
     );
   }
 
