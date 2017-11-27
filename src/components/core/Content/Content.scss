@@ -6,9 +6,8 @@
   display: flex;
   flex: 1 0 auto;
   flex-flow: row wrap;
-  min-height: calc(100vh - #{$size-header-height});
+  min-height: 100vh;
   margin-left: $size-sidebar-width;
-  margin-top: $size-header-height;
   padding: 8px;
   position: relative;
 

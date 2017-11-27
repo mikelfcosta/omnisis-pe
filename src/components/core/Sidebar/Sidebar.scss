@@ -1,7 +1,7 @@
 @import "../../../sass/variables";
 
 .sidebar {
-  background: linear-gradient(180deg, $color-primary 15%, #E66B48 115%);
+  background-color: #004751;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -14,8 +14,10 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 96px;
+    min-height: 128px;
     width: 268px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.44);
 
     img {
       height: 80px;

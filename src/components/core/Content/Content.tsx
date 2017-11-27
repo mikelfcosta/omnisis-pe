@@ -11,7 +11,8 @@ export default class Content extends React.Component<{}, {}> {
   render() {
     return (
       <div className={content}>
-        <Card size={50}></Card>
+        <Card size={65}></Card>
+        <Card size={35}></Card>
       </div>
     );
   }

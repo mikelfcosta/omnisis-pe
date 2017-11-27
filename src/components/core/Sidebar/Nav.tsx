@@ -13,42 +13,50 @@ interface INavigation {
 
 const navigation: INavigation[] = [
   {
-    name: 'Dashboard',
+    name: 'Conceito de Criação',
     children: [
-      { name: 'Administrar', link: '/holders/manage' },
-      { name: 'Grupos', link: '/holders/groups' },
-      { name: 'Perfis', link: '/holders/profiles' },
+      { name: 'Objetivo', link: '/concept/objective' },
+      { name: 'Público Alvo', link: '/concept/public' },
     ],
   },
   {
-    name: 'Alunos',
+    name: 'Estratégias de Comunicação',
     children: [
-      { name: 'Administrar', link: '/holders/manage' },
-      { name: 'Grupos', link: '/holders/groups' },
-      { name: 'Perfis', link: '/holders/profiles' },
+      { name: 'Ações', link: '/communication/actions' },
+      { name: 'Peças', link: '/communication/content' },
     ],
   },
   {
-    name: 'Smart Pass',
+    name: 'Design de Informação',
     children: [
-      { name: 'Maquinas', link: '/iot/machines' },
-      { name: 'Cartões', link: '/iot/cards' },
-      { name: 'Locais', link: '/iot/locations' },
+      { name: 'Organização', link: '/information/organization' },
+      { name: 'Hierarquia e Classificação', link: '/information/hierarchy' },
     ],
   },
   {
-    name: 'Insights',
+    name: 'Design de Navegação',
     children: [
-      { name: 'Comportamento', link: '/insights/behavior' },
-      { name: 'Campus', link: '/insights/campus' },
-      { name: 'Cartões', link: '/insights/cards' },
+      { name: 'Website', link: '/navigation/website' },
+      { name: 'Hierarquia e Classificação', link: '/navigation/hierarchy' },
     ],
   },
   {
-    name: 'Admin',
+    name: 'Design de Interface',
     children: [
-      { name: 'Usuários', link: '/admin/users' },
-      { name: 'Perfis', link: '/admin/roles' },
+      { name: 'Logo', link: '/interface/logo' },
+      { name: 'Tipografia', link: '/interface/typography' },
+      { name: 'Cores', link: '/interface/colors' },
+      { name: 'Fluxo de Navegação', link: '/interface/navigation' },
+    ],
+  },
+  {
+    name: 'Tecnologias',
+    children: [
+      { name: 'Softwares/Ferramentas', link: '/technology/tools' },
+      { name: 'Frameworks/Linguagem', link: '/technology/frameworks' },
+      { name: 'Cartão Inteligente', link: '/technology/smartpass' },
+      { name: 'Arduíno', link: '/technology/arduino' },
+      { name: 'Documentação', link: '/technology/documentation' },
     ],
   },
 ];
