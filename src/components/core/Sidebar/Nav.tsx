@@ -76,7 +76,7 @@ export default class Nav extends React.Component<any, INavState> {
   renderNavigation() {
     return this.state.navigation.map((nav) => {
       return (
-        <div key={nav.name}>
+        <div key={nav.name} style={{ marginBottom: '8px' }}>
           {this.renderNavigationLink(nav)}
           {this.renderNavigationChildren(nav)}
         </div>
