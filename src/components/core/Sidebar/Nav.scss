@@ -4,6 +4,11 @@
   height: 100%;
   margin-top: 32px;
   width: 268px;
+  overflow: hidden;
+
+  &:hover {
+    overflow-y: auto;
+  }
 
   &-item {
     align-items: center;

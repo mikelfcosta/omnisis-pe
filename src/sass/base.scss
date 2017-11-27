@@ -21,11 +21,11 @@ html, body {
   z-index: 100;
 
   &-thumb {
-    background-color: $color-primary;
+    background-color: $color-contrast-light;
   }
 
   &-track {
-    background-color: $color-clear;
+    background-color: $color-contrast-dark;
     border: 1px solid rgba(0,0,0,0.14);
   }
 }

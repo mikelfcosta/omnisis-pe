@@ -1,7 +1,7 @@
 @import "../../../sass/variables";
 
 .sidebar {
-  background-color: #004751;
+  background-color: $color-contrast-dark;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -9,6 +9,7 @@
   position: fixed;
   width: $size-sidebar-width;
   z-index: $z-index-sidebar;
+  overflow: hidden;
 
   &-logo {
     align-items: center;
