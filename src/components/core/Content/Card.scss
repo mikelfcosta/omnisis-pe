@@ -9,15 +9,17 @@
     border-radius: 2px;
     box-shadow: $whiteframe-shadow-1dp;
     height: 100%;
-    padding: 16px;
+    padding: 32px;
     width: 100%;
   }
 
   &-header {
     display: flex;
-    flex: 1 1;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 600;
     color: $color-primary;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $color-clear;
+    width: 40%;
   }
 }
